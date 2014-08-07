@@ -1,0 +1,5 @@
+$('#tasks-list').empty();
+
+<% @project.tasks.each do |task| %>
+  $('#tasks-list').append('<li> <%= task.name %> ');
+<% end %>

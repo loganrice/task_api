@@ -1,6 +1,26 @@
-<h1>Projects</h1>
-<ul>
-<% @projects.each do |project| %>
-  <li><%= link_to project.name, project_tasks_path(project) %></li>
-<% end %>
-</ul>
+
+<section class="projects pull-left">
+  <ul class="list">
+    <% @projects.each do |project| %>
+      <li>
+        <%= link_to project.name, project, method: 'get', remote: true %>
+      </li>
+    <% end %>
+  </ul>
+  <%= render 'form', object: @project %>
+
+</section>
+
+<section class="tasks pull-left">
+  <ul id='tasks-list' class="list">
+    <% @projects.first.tasks.each do |task| %>
+      <li>
+        <%= task.name %>
+      </li>
+    <% end %>
+  </ul>
+
+</section>
+
+
+

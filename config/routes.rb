@@ -3,11 +3,10 @@ SeoChecklist::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'projects#home'
-  resources :projects do
-    resources :tasks
+  root 'projects#index'
+  resources :projects do 
+    resources :tasks 
   end
-
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

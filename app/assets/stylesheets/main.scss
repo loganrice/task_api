@@ -1,0 +1,78 @@
+body{
+  background: #27ffac;
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.tasks{
+  display:block;
+  width:500px;
+  ul {
+    list-style:none;
+    font-size:50px;
+    letter-spacing:-3px;
+    font-weight:bold;
+  }
+}
+
+.projects {
+  @extend .tasks;
+  background-image: url('../../img/}.svg');
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: contain;
+  color:rgba(0,0,0,.6);
+}
+
+.active {
+  color: black;
+}
+
+
+
+li.done{
+  text-decoration:line-through;
+  color:rgba(0,0,0,.6);
+}
+
+
+
+p{
+  color:rgba(0,0,0,.6);
+  position:absolute;
+  width:100%;
+  bottom:10em;
+  font-weight:300;
+  text-align:center;
+}
+
+
+
+textarea {
+  display: none;
+  border-radius: 5px;
+  outline: none;
+  border-color: #fff;
+  resize: none;
+  position: relative;
+  top: -50px;
+  height: 50px;
+  margin-left: 55px;
+  background: #fff;
+}
+
+img {
+  opacity: .6;
+}
+
+.pull-left {
+  float: left;
+}
+
+.test {
+  color: blue;
+}
