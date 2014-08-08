@@ -4,8 +4,8 @@ SeoChecklist::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'projects#index'
-  resources :projects do 
-    resources :tasks 
+  resources :projects do
+    resources :tasks
   end
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

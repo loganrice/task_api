@@ -1,0 +1,12 @@
+<ul id='tasks-list' class="list">
+  <% project.tasks.each do |task| %>
+    <li>
+      <%= task.name %>
+    </li>
+  <% end %>
+</ul>
+
+<%= form_tag(project_tasks_path(project), id: "task-form") do %>
+  <%= text_field_tag(:name) %>
+  <%= submit_tag("+Add") %>
+<% end %>
